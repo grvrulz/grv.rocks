@@ -33,8 +33,6 @@ add_theme_support( 'custom-header', array(
 	'flex-height'     => true,
 ) );
 
-//* Add support for custom background
-add_theme_support( 'custom-background' );
 
 //* Remove the secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
@@ -85,5 +83,5 @@ genesis_register_sidebar( array(
 
 add_action( 'genesis_before', 'empty_bg_element');
 function empty_bg_element() {
-    echo '<div class="bg"></div>';
+    echo '<div class="bg"><div class="bg-inner"></div></div>';
 }
