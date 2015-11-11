@@ -43,7 +43,6 @@
 	- Genesis eNews Extended
 	- Genesis Simple Share
 	- Jetpack
-- Sticky Message
 - Site Header
 	- Site Title and Description
 	- Header Widget Area
@@ -821,49 +820,6 @@ img.alignright,
 #wpstats {
 	display: none;
 }
-
-
-/* Sticky Message
----------------------------------------------------------------------------------------------------- */
-
-.sticky-message {
-	background-color: #333;
-	font-size: 16px;
-	opacity: 0;
-	padding-bottom: 20px;
-	padding-top: 20px;
-	position: fixed;
-	text-align: center;
-	width: 100%;
-	z-index: 999;
-}
-
-.sticky-message {
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition:    all 0.3s ease-in-out;
-	-ms-transition:     all 0.3s ease-in-out;
-	-o-transition:      all 0.3s ease-in-out;
-	transition:         all 0.3s ease-in-out;
-}
-
-.sticky-message.reveal {
-	opacity: 1;
-}
-
-.sticky-message,
-.sticky-message a:hover,
-.sticky-message p {
-	color: #fff;
-}
-
-.sticky-message a {
-	color: #999;
-}
-
-.sticky-message p:last-child {
-	margin-bottom: 0;
-} 
-
 
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */

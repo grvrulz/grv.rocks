@@ -12,7 +12,6 @@ add_action( 'wp_enqueue_scripts', 'mobile_first_scripts_styles' );
 function mobile_first_scripts_styles() {
 
 	wp_enqueue_script( 'mobile-first-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
-	wp_enqueue_script( 'mobile-first-sticky-message', get_bloginfo( 'stylesheet_directory' ) . '/js/sticky-message.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700', array(), CHILD_THEME_VERSION );
@@ -45,16 +44,8 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 
-//* Hook sticky message before site header
-add_action( 'genesis_before', 'mobile_first_sticky_message' );
-function mobile_first_sticky_message() {
-
-	genesis_widget_area( 'sticky-message', array(
-		'before' => '<div class="sticky-message">',
-		'after'  => '</div>',
-	) );
-
-}
+//* Force full-width-content layout setting
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 //* Remove comment form allowed tags
 add_filter( 'comment_form_defaults', 'mobile_first_remove_comment_form_allowed_tags' );
