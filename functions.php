@@ -82,3 +82,8 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Sticky Message', 'bg-mobile-first' ),
 	'description' => __( 'This is the sticky message widget area.', 'bg-mobile-first' ),
 ) );
+
+add_action( 'genesis_before', 'empty_bg_element');
+function empty_bg_element() {
+    echo '<div class="bg"></div>';
+}
