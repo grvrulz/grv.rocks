@@ -1157,6 +1157,20 @@ img.alignright,
 	color: #ddd;
 }
 
+/* Post Formats
+--------------------------------------------- */
+
+.format-quote {
+    background: #E5554E;
+    color: #fff
+}
+
+.format-quote a,
+.format-quote .entry-meta {
+    color: #fff;
+}
+
+
 /* Entry Meta
 --------------------------------------------- */
 
