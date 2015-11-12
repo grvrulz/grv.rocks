@@ -1165,6 +1165,7 @@ img.alignright,
 .entry-header,
 .entry-content,
 .entry-footer,
+.entry-comments,
 .comment-respond {
     width: 100%;
 }
@@ -1307,7 +1308,7 @@ p.comment-meta,
 }
 
 .entry-comments .comment {
-	border-bottom: 5px solid #f5f5f5;
+	border-bottom: 2px solid rgba(0,0,0,0.3);
 }
 
 p.comment-form-comment {
@@ -1332,6 +1333,9 @@ p.form-submit,
 	list-style-type: none;
 }
 
+.comment-author img {
+    border-radius: 50%;
+}
 
 /* Sidebar
 ---------------------------------------------------------------------------------------------------- */
@@ -1587,6 +1591,7 @@ p.form-submit,
     .entry-header,
     .entry-content,
     .entry-footer,
+    .entry-comments,
     .comment-respond {
         max-width: 700px;
         margin: 0 auto;
