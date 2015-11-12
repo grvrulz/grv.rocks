@@ -1371,15 +1371,20 @@ p.form-submit,
 
 .footer-widgets,
 .footer-widgets a {
-	color: #999;
+	color: #ccc;
 }
 
 .footer-widgets .big {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .footer-widgets a {
     text-decoration: underline;
+    box-shadow: none;
+}
+
+.footer-widgets a:hover {
+    box-shadow: none
 }
 
 .footer-widgets input {
