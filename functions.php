@@ -14,7 +14,7 @@ function mobile_first_scripts_styles() {
 	wp_enqueue_script( 'mobile-first-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:700|PT+Serif:400italic,400,700', array(), CHILD_THEME_VERSION );
 
 }
 
@@ -33,6 +33,15 @@ add_theme_support( 'custom-header', array(
 	'flex-height'     => true,
 ) );
 
+
+//* Add support for structural wraps
+add_theme_support( 'genesis-structural-wraps', array(
+	'header',
+	'nav',
+	'subnav',
+	'footer-widgets',
+	'footer'
+) );
 
 //* Remove the secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
