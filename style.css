@@ -267,6 +267,13 @@ video,
 	max-width: 100%;
 }
 
+embed,
+iframe,
+object,
+video {
+    width: 100%;
+}
+
 img {
 	height: auto;
 }
