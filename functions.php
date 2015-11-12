@@ -90,7 +90,6 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the sticky message widget area.', 'bg-mobile-first' ),
 ) );
 
-add_action( 'genesis_before', 'empty_bg_element');
-function empty_bg_element() {
-    echo '<div class="bg"><div class="bg-inner"></div></div>';
-}
+
+//* Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
