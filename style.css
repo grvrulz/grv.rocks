@@ -1372,6 +1372,14 @@ p.form-submit,
 	color: #999;
 }
 
+.footer-widgets .big {
+    font-size: 32px;
+}
+
+.footer-widgets a {
+    text-decoration: underline;
+}
+
 .footer-widgets input {
 	border: 1px solid #333;
 }
@@ -1388,7 +1396,7 @@ p.form-submit,
 }
 
 .footer-widgets .widget {
-	margin-bottom: 60px;
+	margin-bottom: 5px;
 }
 
 .footer-widgets p:last-child {
