@@ -14,7 +14,7 @@ function mobile_first_scripts_styles() {
 	wp_enqueue_script( 'mobile-first-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:700|PT+Serif:400italic,400,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:700|Libre+Baskerville:400italic,400,700', array(), CHILD_THEME_VERSION );
 
 }
 
@@ -93,3 +93,16 @@ genesis_register_sidebar( array(
 
 //* Remove the site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+
+//* Customize the entry meta in the entry header (requires HTML5 theme support)
+add_filter( 'genesis_post_info', 'sp_post_info_filter' );
+function sp_post_info_filter($post_info) {
+	$post_info = '[post_date]';
+	return $post_info;
+}
+
+
+//* Reposition the entry meta in the entry header
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
