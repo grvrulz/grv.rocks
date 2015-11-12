@@ -564,13 +564,14 @@ th {
 
 .archive-description,
 .author-box {
-	border-bottom: 1px solid #ededed;
+
 	margin-bottom: 60px;
 	padding-bottom: 30px;
 }
 
 .archive-description {
     text-align: center;
+    border-bottom: 1px solid #cccccc;
 }
 
 .single .author-box {
