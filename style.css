@@ -204,6 +204,10 @@ blockquote {
 	margin: 70px -50px;
 }
 
+blockquote cite {
+    font-style: normal;
+}
+
 blockquote::before {
 	content: "\201C";
 	display: block;
@@ -1142,10 +1146,9 @@ img.alignright,
 
 .entry,
 .page.page-template-page_blog-php .entry {
-	margin-bottom: 60px;
+	margin-bottom: 24px;
     background: transparent;
-    padding-left: 6%;
-	padding-right: 6%;
+    padding-left: 40px 6% 30px;
     width: 100%;
 }
 
