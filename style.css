@@ -216,7 +216,7 @@ blockquote::before {
 	height: 0;
 	left: -80px;
 	position: relative;
-	top: -10px;
+	top: -30px;
 }
 
 
@@ -1149,6 +1149,7 @@ img.alignright,
     background: transparent;
     padding: 40px 6% 30px;
     width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .page .entry,
@@ -1197,7 +1198,14 @@ img.alignright,
 }
 
 .format-quote a,
-.format-quote .entry-meta {
+.format-quote .entry-meta,
+.format-link a,
+.format-link .entry-meta {
+    color: #fff;
+}
+
+.format-link {
+    background: #1C8A4A;
     color: #fff;
 }
 
