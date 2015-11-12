@@ -808,6 +808,11 @@ img.alignright,
 /* Genesis Simple Share
 --------------------------------------------- */
 
+.content .share-filled,
+.content .share-outline {
+    text-align: center;
+}
+
 .content .share-after {
 	margin-bottom: 20px;
 }
@@ -821,13 +826,11 @@ img.alignright,
 }
 
 .content .share-filled .share {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
+
 }
 
 .content .share-filled .count {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+
 }
 
 .content .share-filled .facebook .count,
