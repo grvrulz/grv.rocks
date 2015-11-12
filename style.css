@@ -1145,7 +1145,7 @@ img.alignright,
 
 .entry,
 .page.page-template-page_blog-php .entry {
-	margin-bottom: 24px;
+	margin-bottom: 0;
     background: transparent;
     padding: 40px 6% 30px;
     width: 100%;

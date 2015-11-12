@@ -129,5 +129,5 @@ remove_action( 'genesis_entry_content', 'genesis_do_post_permalink', 14 );
 
 
 //* Add theme support for footer widgets
-add_theme_support( 'genesis_footer_widgets', 1);
+add_theme_support( 'genesis-footer-widgets', 1);
 remove_action( 'genesis_footer', 'genesis_do_footer' );
