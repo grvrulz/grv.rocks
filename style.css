@@ -1391,10 +1391,18 @@ p.form-submit,
 	color: #fff;
 }
 
-.footer-widgets li {
-	border-bottom: 1px dotted #666;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
+.footer-widgets .menu {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+}
+
+.footer-widgets .menu li {
+	display: inline-block;
+}
+
+.footer-widgets .menu li a {
+    padding: 10px 14px;
 }
 
 .footer-widgets .widget {
