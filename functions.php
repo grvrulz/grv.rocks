@@ -124,3 +124,5 @@ add_theme_support( 'post-formats', array(
 	'status',
 	'video'
 ) );
+
+remove_action( 'genesis_entry_content', 'genesis_do_post_permalink', 14 );

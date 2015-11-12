@@ -201,15 +201,15 @@ i {
 }
 
 blockquote {
-	margin: 40px;
+	margin: 70px -50px;
 }
 
 blockquote::before {
 	content: "\201C";
 	display: block;
-	font-size: 30px;
+	font-size: 60px;
 	height: 0;
-	left: -20px;
+	left: -60px;
 	position: relative;
 	top: -10px;
 }
