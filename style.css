@@ -272,6 +272,8 @@ iframe,
 object,
 video {
     width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 img {
@@ -562,9 +564,13 @@ th {
 
 .archive-description,
 .author-box {
-	border-bottom: 5px solid #f5f5f5;
+	border-bottom: 1px solid #ededed;
 	margin-bottom: 60px;
 	padding-bottom: 30px;
+}
+
+.archive-description {
+    text-align: center;
 }
 
 .single .author-box {
@@ -614,7 +620,7 @@ th {
 --------------------------------------------- */
 
 .archive-title {
-	font-size: 20px;
+
 }
 
 .entry-title {
