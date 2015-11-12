@@ -33,17 +33,17 @@ add_theme_support( 'custom-header', array(
 	'flex-height'     => true,
 ) );
 
+//* Add Accessibility support
+add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu',  'search-form', 'skip-links', 'rems' ) );
 
 //* Add support for structural wraps
 add_theme_support( 'genesis-structural-wraps', array(
 	'header',
-	'nav',
-	'subnav',
-	'footer-widgets',
 	'footer'
 ) );
 
-//* Remove the secondary sidebar
+//* Remove the sidebars
+unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
 
 //* Remove site layouts
@@ -80,9 +80,6 @@ function mobile_first_comments_gravatar( $args ) {
 
 }
 
-//* Add support for 3-column footer widgets
-add_theme_support( 'genesis-footer-widgets', 3 );
-
 //* Register widget areas
 genesis_register_sidebar( array(
 	'id'          => 'sticky-message',
@@ -106,3 +103,16 @@ function sp_post_info_filter($post_info) {
 //* Reposition the entry meta in the entry header
 remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
+
+//* Add support for post formats
+add_theme_support( 'post-formats', array(
+	'aside',
+	'audio',
+	'chat',
+	'gallery',
+	'image',
+	'link',
+	'quote',
+	'status',
+	'video'
+) );
