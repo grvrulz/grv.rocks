@@ -835,7 +835,8 @@ img.alignright,
 --------------------------------------------- */
 
 .site-title {
-	font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-size: 28px;
 	letter-spacing: 1px;
 	margin-bottom: 0;
 	text-transform: uppercase;
@@ -903,7 +904,7 @@ img.alignright,
 .genesis-nav-menu a {
 	color: #333;
 	display: block;
-	padding: 20px;
+	padding: 16px 14px;
 }
 
 .genesis-nav-menu a:hover,
@@ -1060,12 +1061,20 @@ img.alignright,
     background: transparent;
     padding-left: 6%;
 	padding-right: 6%;
+    width: 100%;
 }
 
 .page .entry,
 .single .entry {
 	border-bottom: 0;
 	margin-bottom: 30px;
+}
+
+.entry-header,
+.entry-content,
+.entry-footer {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .entry-content ol,
@@ -1243,8 +1252,6 @@ p.form-submit,
 .footer-widgets {
 	background-color: #333;
 	clear: both;
-	padding-left: 5%;
-	padding-right: 5%;
 	padding-top: 60px;
 }
 
@@ -1281,9 +1288,12 @@ p.form-submit,
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #fff;
+	background-color: #666;
+    background: url(images/code.jpg) center center fixed;
+    background-size: cover;
+    color: #fff;
 	font-size: 16px;
-	padding: 40px 5%;
+	padding: 10% 5%;
 	text-align: center;
 }
 
@@ -1308,9 +1318,8 @@ p.form-submit,
     }
 
     .site-inner {
-		max-width: 760px;
-        margin: 0 auto;
-	}
+
+    }
 
 
 	.footer-widgets,
@@ -1363,6 +1372,7 @@ p.form-submit,
 
 	.title-area {
 		text-align: left;
+        padding: 11px 0;
 	}
 
 	.header-image .site-title > a {
@@ -1464,24 +1474,24 @@ p.form-submit,
 	.footer-widgets-2,
 	.sidebar-content .sidebar,
 	.title-area {
-		margin-left: 5%;
+
 	}
 
 	.content-sidebar .sidebar,
 	.footer-widgets-3,
 	.header-widget-area,
 	.sidebar-content .content {
-		margin-right: 5%;
+
 	}
 
 	.full-width-content .content,
 	.menu-primary,
 	.menu-secondary {
-		padding-left: 5%;
+
 	}
 
 	.full-width-content .content {
-		padding-right: 5%;
+
 	}
 
 	.comment-list ul.children {
