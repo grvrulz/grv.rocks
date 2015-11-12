@@ -271,6 +271,10 @@ img {
 	height: auto;
 }
 
+img.round {
+    border-radius: 50%;
+}
+
 .featured-content img,
 .gallery img {
 	width: auto;
@@ -1104,6 +1108,16 @@ img.alignright,
 	margin: 0;
 }
 
+/* Home Page
+---------------------------------------------------------------------------------------------------- */
+.home-top .sans {
+    font-family: 'Source Sans Pro';
+}
+
+.home-top h1,
+.home-top p {
+    margin-bottom: 0;
+}
 
 /* Content Area
 ---------------------------------------------------------------------------------------------------- */
@@ -1361,7 +1375,7 @@ p.form-submit,
     background-size: cover;
     color: #fff;
 	font-size: 16px;
-	padding: 10% 5%;
+	padding: 6% 5%;
 	text-align: center;
 }
 
