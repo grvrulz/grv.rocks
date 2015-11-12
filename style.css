@@ -1164,9 +1164,9 @@ img.alignright,
 
 .entry-header,
 .entry-content,
-.entry-footer {
-    max-width: 700px;
-    margin: 0 auto;
+.entry-footer,
+.comment-respond {
+    width: 100%;
 }
 
 .entry-content ol,
@@ -1583,6 +1583,14 @@ p.form-submit,
 	.responsive-menu .menu-open.menu-item-has-children:before {
 		display: none;
 	}
+
+    .entry-header,
+    .entry-content,
+    .entry-footer,
+    .comment-respond {
+        max-width: 700px;
+        margin: 0 auto;
+    }
 
 	.comment-list ul.children {
 		margin-left: 40px;
