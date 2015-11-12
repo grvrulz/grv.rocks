@@ -1357,9 +1357,14 @@ p.form-submit,
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
+    clear: both;
 	background-color: #333;
-	clear: both;
-	padding-top: 60px;
+    background: url(images/code.jpg) center center fixed;
+    background-size: cover;
+    color: #fff;
+	font-size: 16px;
+	padding: 6% 5%;
+	text-align: center;
 }
 
 .footer-widgets,
@@ -1395,13 +1400,7 @@ p.form-submit,
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #666;
-    background: url(images/code.jpg) center center fixed;
-    background-size: cover;
-    color: #fff;
-	font-size: 16px;
-	padding: 6% 5%;
-	text-align: center;
+
 }
 
 .site-footer p {
@@ -1439,36 +1438,20 @@ p.form-submit,
 		max-width: 800px;
 	}
 
-	.content {
-		width: 55%; /* 660px */
-	}
-
 	.full-width-content .content {
 		width: 100%;
 	}
 
-	.footer-widgets-3,
-	.sidebar {
-		width: 30%; /* 360px */
-	}
-
-	.footer-widgets-1,
-	.footer-widgets-2 {
-		width: 25%; /* 300px */
+	.footer-widgets-1 {
+		width: 100%; /* 300px */
 	}
 
 	.content,
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.sidebar-content .sidebar,
 	.title-area {
 		float: left;
 	}
 
-	.footer-widgets-3,
 	.header-widget-area,
-	.sidebar,
-	.sidebar-content .content,
 	.site-header .search-form {
 		float: right;
 	}
@@ -1574,31 +1557,6 @@ p.form-submit,
 	.responsive-menu > .menu-item-has-children:before,
 	.responsive-menu .menu-open.menu-item-has-children:before {
 		display: none;
-	}
-
-	.content-sidebar .content,
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.sidebar-content .sidebar,
-	.title-area {
-
-	}
-
-	.content-sidebar .sidebar,
-	.footer-widgets-3,
-	.header-widget-area,
-	.sidebar-content .content {
-
-	}
-
-	.full-width-content .content,
-	.menu-primary,
-	.menu-secondary {
-
-	}
-
-	.full-width-content .content {
-
 	}
 
 	.comment-list ul.children {
