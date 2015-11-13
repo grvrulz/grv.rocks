@@ -125,7 +125,7 @@ add_theme_support( 'post-formats', array(
 	'video'
 ) );
 
-remove_action( 'genesis_entry_content', 'genesis_do_post_permalink', 14 );
+//remove_action( 'genesis_entry_content', 'genesis_do_post_permalink', 14 );
 
 
 //* Add theme support for footer widgets
