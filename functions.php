@@ -131,3 +131,13 @@ add_theme_support( 'post-formats', array(
 //* Add theme support for footer widgets
 add_theme_support( 'genesis-footer-widgets', 1);
 remove_action( 'genesis_footer', 'genesis_do_footer' );
+
+
+// do NOT include the opening line! Just add what's below to the end of your functions.php file
+add_action( 'edit_form_after_title', 'rgc_posts_page_edit_form' );
+function rgc_posts_page_edit_form() {
+	global $post, $post_type, $post_ID;
+	if ( $post_ID == get_option( 'page_for_posts' ) && empty( $post->post_content ) ) {
+		add_post_type_support( $post_type, 'editor' );
+	}
+}
