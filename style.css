@@ -536,6 +536,7 @@ th {
 
 .site-container {
 	margin: 0 auto;
+	padding-top: 96px;
 }
 
 .site-inner {
@@ -917,8 +918,12 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #202020;
+	background-color: rgba(32, 32, 32, 0.76);
+	box-shadow: 0 1px 4px 1px rgba(32, 32, 32, 0.6);
 	text-align: center;
+	position: fixed;
+	left: 0;
+	width: 100%;
 }
 
 .site-header .wrap {
