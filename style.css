@@ -939,6 +939,7 @@ img.alignright,
 .site-title a,
 .site-title a:hover {
 	color: #f1f1f1;
+	font-weight: 700;
 }
 
 .header-image .site-title > a {
