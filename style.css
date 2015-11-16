@@ -244,9 +244,10 @@ h5,
 h6 {
 	color: #333;
     font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
 	line-height: 1.2;
 	margin: 0 0 20px;
+	text-transform: uppercase;
 }
 
 h1 {
