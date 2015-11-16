@@ -536,11 +536,11 @@ th {
 
 .site-container {
 	margin: 0 auto;
-	padding-top: 96px;
 }
 
 .site-inner {
 	clear: both;
+	padding-top: 96px;
 }
 
 
