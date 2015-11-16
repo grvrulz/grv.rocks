@@ -3,7 +3,7 @@
  * Blog Intro
  *
  */
-add_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
+remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
 add_action( 'genesis_before_loop', 'rgc_blog_intro' );
 function rgc_blog_intro() {
 	$posts_page = get_option( 'page_for_posts' );
