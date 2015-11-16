@@ -14,7 +14,7 @@ function mobile_first_scripts_styles() {
 	wp_enqueue_script( 'mobile-first-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,700|Libre+Baskerville:400italic,400,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Alegreya+Sans:300,900|Libre+Baskerville:400italic,400,700', array(), CHILD_THEME_VERSION );
 
 }
 
