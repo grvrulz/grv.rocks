@@ -165,3 +165,6 @@ function wap_site_title( $title ) {
 	return $title;
 
 }
+
+//* Add editor styles
+add_editor_style( 'editor-style.css' );
