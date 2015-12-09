@@ -43,7 +43,7 @@ function grvrocks_grid_body_class( $classes ) {
 }
 
 //* Remove entry content
-if ( !has_post_format('quote', $post->ID ) || !has_post_format('status', $post->ID) ) {
+if ( 'link' != get_post_format() || 'quote' != get_post_format() ) {
 	remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 }
 
