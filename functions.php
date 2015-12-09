@@ -187,7 +187,7 @@ function grvrocks_set_background_image() {
 add_action( 'genesis_after_header', 'grvrocks_entry_background' );
 function grvrocks_entry_background() {
 	$postid = get_the_ID();
-	if ( ( is_singular( 'post' ) ||  is_singular( 'page' ) ) && has_post_thumbnail($postid) ) {
+	if ( ( is_singular( 'post' ) ||  is_singular( 'page' ) ) && ( 'link' != get_post_format() || 'quote' != get_post_format() ) && has_post_thumbnail($postid) ) {
 		echo '<div class="entry-background"></div>';
 
 	}
