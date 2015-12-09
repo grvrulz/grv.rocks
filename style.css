@@ -1179,28 +1179,6 @@ img.alignright,
 /* Entries
 --------------------------------------------- */
 
-.grvrocks-grid .entry {
-	background-color: rgba(0, 0, 0, 0.5);
-	float: left;
-	margin: 0 4% 4% 0;
-	min-height: 200px;
-	position: relative;
-	text-align: center;
-	width: 48%;
-}
-
-.grvrocks-grid .entry:nth-of-type(2n) {
-	margin: 0 0 4% 0;
-}
-
-.grvrocks-grid .entry:nth-of-type(2n+1) {
-	margin: 0 4% 4% 0;
-}
-
-.grvrocks-grid .entry:hover {
-	opacity: 0.75;
-}
-
 .entry,
 .page.page-template-page_blog-php .entry {
 	margin-bottom: 0;
@@ -1246,6 +1224,30 @@ img.alignright,
 .entry-content code {
 	background-color: #333;
 	color: #ddd;
+}
+
+/* Grid wala stuff */
+
+.grvrocks-grid .entry {
+	background-color: rgba(0, 0, 0, 0.5);
+	float: left;
+	margin: 0 4% 4% 0;
+	min-height: 200px;
+	position: relative;
+	text-align: center;
+	width: 48%;
+}
+
+.grvrocks-grid .entry:nth-of-type(2n) {
+	margin: 0 0 4% 0;
+}
+
+.grvrocks-grid .entry:nth-of-type(2n+1) {
+	margin: 0 4% 4% 0;
+}
+
+.grvrocks-grid .entry:hover {
+	opacity: 0.75;
 }
 
 /* Post Formats
