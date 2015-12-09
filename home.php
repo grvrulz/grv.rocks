@@ -1,4 +1,8 @@
 <?php
+
+
+global $post;
+
 /**
  * Blog Intro
  *
@@ -39,7 +43,7 @@ function grvrocks_grid_body_class( $classes ) {
 }
 
 //* Remove entry content
-if ( !has_post_format('quote') || !has_post_format('status') ) {
+if ( !has_post_format('quote', $post->ID ) || !has_post_format('status', $post->ID) ) {
 	remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 }
 
