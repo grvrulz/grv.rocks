@@ -4,21 +4,21 @@ include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'Mobile First Theme' );
-define( 'CHILD_THEME_URL', 'http://briangardner.com/themes/mobile-first/' );
+define( 'CHILD_THEME_URL', 'http://briangardner.com/themes/grvrocks/' );
 define( 'CHILD_THEME_VERSION', '1.0.4' );
 
 //* Enqueue scripts and styles
-add_action( 'wp_enqueue_scripts', 'mobile_first_scripts_styles' );
-function mobile_first_scripts_styles() {
+add_action( 'wp_enqueue_scripts', 'grvrocks_scripts_styles' );
+function grvrocks_scripts_styles() {
 
-	wp_enqueue_script( 'mobile-first-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_script( 'grvrocks-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,800|Libre+Baskerville:400italic,400,700', array(), CHILD_THEME_VERSION );
 
 	if ( is_singular( array( 'post', 'page' ) ) && has_post_thumbnail() ) {
-		wp_enqueue_script( 'cegg-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch.js', array( 'jquery' ), '1.0.0', true );
-		wp_enqueue_script( 'cegg-backstretch-set', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch-set.js' , array( 'jquery', 'cegg-backstretch' ), '1.0.0', true );
+		wp_enqueue_script( 'grvrocks-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'grvrocks-backstretch-set', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch-set.js' , array( 'jquery', 'grvrocks-backstretch' ), '1.0.0', true );
 
 	}
 }
@@ -68,8 +68,8 @@ remove_theme_support( 'genesis-inpost-layouts' );
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 //* Remove comment form allowed tags
-add_filter( 'comment_form_defaults', 'mobile_first_remove_comment_form_allowed_tags' );
-function mobile_first_remove_comment_form_allowed_tags( $defaults ) {
+add_filter( 'comment_form_defaults', 'grvrocks_remove_comment_form_allowed_tags' );
+function grvrocks_remove_comment_form_allowed_tags( $defaults ) {
 	
 	$defaults['comment_notes_after'] = '';
 	return $defaults;
@@ -77,16 +77,16 @@ function mobile_first_remove_comment_form_allowed_tags( $defaults ) {
 }
 
 //* Modify the size of the Gravatar in the author box
-add_filter( 'genesis_author_box_gravatar_size', 'mobile_first_author_box_gravatar' );
-function mobile_first_author_box_gravatar( $size ) {
+add_filter( 'genesis_author_box_gravatar_size', 'grvrocks_author_box_gravatar' );
+function grvrocks_author_box_gravatar( $size ) {
 
 	return 160;
 
 }
 
 //* Modify the size of the Gravatar in the entry comments
-add_filter( 'genesis_comment_list_args', 'mobile_first_comments_gravatar' );
-function mobile_first_comments_gravatar( $args ) {
+add_filter( 'genesis_comment_list_args', 'grvrocks_comments_gravatar' );
+function grvrocks_comments_gravatar( $args ) {
 
 	$args['avatar_size'] = 100;
 	return $args;
@@ -96,8 +96,8 @@ function mobile_first_comments_gravatar( $args ) {
 //* Register widget areas
 genesis_register_sidebar( array(
 	'id'          => 'sticky-message',
-	'name'        => __( 'Sticky Message', 'bg-mobile-first' ),
-	'description' => __( 'This is the sticky message widget area.', 'bg-mobile-first' ),
+	'name'        => __( 'Sticky Message', 'grvrocks' ),
+	'description' => __( 'This is the sticky message widget area.', 'grvrocks' ),
 ) );
 
 
@@ -178,17 +178,40 @@ add_editor_style( 'editor-style.css' );
 //* Backstretch
 
 //* Localize backstretch script
-add_action( 'genesis_after_entry', 'cegg_set_background_image' );
-function cegg_set_background_image() {
+add_action( 'genesis_after_entry', 'grvrocks_set_background_image' );
+function grvrocks_set_background_image() {
 	$image = array( 'src' => has_post_thumbnail() ? genesis_get_image( array( 'format' => 'url' ) ) : '' );
-	wp_localize_script( 'cegg-backstretch-set', 'BackStretchImg', $image );
+	wp_localize_script( 'grvrocks-backstretch-set', 'BackStretchImg', $image );
 }
 //* Hook entry background area
-add_action( 'genesis_after_header', 'cegg_entry_background' );
-function cegg_entry_background() {
+add_action( 'genesis_after_header', 'grvrocks_entry_background' );
+function grvrocks_entry_background() {
 	$postid = get_the_ID();
 	if ( ( is_singular( 'post' ) ||  is_singular( 'page' ) ) && has_post_thumbnail($postid) ) {
 		echo '<div class="entry-background"></div>';
 
 	}
+}
+
+
+
+//* Add body class if no featured image
+add_filter( 'body_class', 'grvrocks_featured_img_body_class' );
+function grvrocks_featured_img_body_class( $classes ) {
+
+	if ( is_singular( array( 'post', 'page' ) ) && ! has_post_thumbnail() ) {
+		$classes[] = 'no-featured-image';
+	}
+	return $classes;
+
+}
+
+//* Remove Content and Excerpt options from content archive metabox
+add_filter( 'genesis_archive_display_options', 'grvrocks_add_content_archive_display_option' );
+function grvrocks_add_content_archive_display_option( $options ) {
+	unset( $options['full'] );
+	unset( $options['excerpts'] );
+	$options['nocontent'] = __( 'No Content', 'grvrocks' );
+
+	return $options;
 }
