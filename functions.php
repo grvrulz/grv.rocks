@@ -186,7 +186,7 @@ function cegg_set_background_image() {
 //* Hook entry background area
 add_action( 'genesis_after_header', 'cegg_entry_background' );
 function cegg_entry_background() {
-	if ( is_singular( 'post' ) || ( is_singular( 'page' ) && has_post_format('standard') && has_post_thumbnail() ) ) {
+	if ( (is_singular( 'post' ) || ( is_singular( 'page' ) ) && has_post_format('standard') && has_post_thumbnail() ) ) {
 		echo '<div class="entry-background"></div>';
 
 	}
