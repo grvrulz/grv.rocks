@@ -58,4 +58,10 @@ remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 )
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 
+add_theme_support( 'genesis-structural-wraps', array(
+	'header',
+	'footer',
+	'site-inner'
+) );
+
 genesis();
