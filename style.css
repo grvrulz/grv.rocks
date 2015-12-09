@@ -1165,6 +1165,16 @@ img.alignright,
 /* Content Area
 ---------------------------------------------------------------------------------------------------- */
 
+/* Add style for the new page or post background image
+---------------------------------------------------------- */
+
+.entry-background {
+	height: 350px;
+	display: block;
+	height: 560px;
+	width: 100%;
+	z-index: -99 !important;
+}
 /* Entries
 --------------------------------------------- */
 
@@ -1460,6 +1470,12 @@ p.form-submit,
 
 /* Media Queries
 ---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 480px) {
+	.entry-background {
+		height: 560px;
+	}
+}
 
 @media only screen and (min-width: 800px) {
 
