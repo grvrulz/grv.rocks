@@ -38,17 +38,8 @@ function grvrocks_grid_body_class( $classes ) {
 
 }
 
-//* Customize the entry meta in the entry header
-remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-add_action( 'genesis_entry_header', 'grvrocks_post_info', 12 );
-function grvrocks_post_info() {
-
-	echo '<p class="entry-meta">' . do_shortcode( '[post_date]' ) . '</p>';
-
-}
-
 //* Remove entry content
-if ( !has_post_format(array('quote','link','status') ) ) {
+if ( !has_post_format('quote') || !has_post_format('status') ) {
 	remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 }
 
