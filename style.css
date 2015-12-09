@@ -667,6 +667,18 @@ th {
 	color: #fff;
 }
 
+.grvrocks-grid .entry-title {
+	font-size: 30px;
+	margin-bottom: 0;
+    padding: 0 15px;
+}
+
+.grvrocks-grid .entry-title a,
+.grvrocks-grid .entry-title a:hover {
+	color: #fff;
+	display: block;
+}
+
 /* WordPress
 --------------------------------------------- */
 
@@ -1230,20 +1242,12 @@ img.alignright,
 
 .grvrocks-grid .entry {
 	background-color: rgba(0, 0, 0, 0.5);
-	float: left;
+	float: none;
 	margin: 0 4% 4% 0;
 	min-height: 200px;
 	position: relative;
 	text-align: center;
-	width: 48%;
-}
-
-.grvrocks-grid .entry:nth-of-type(2n) {
-	margin: 0 0 4% 0;
-}
-
-.grvrocks-grid .entry:nth-of-type(2n+1) {
-	margin: 0 4% 4% 0;
+	width: 100%;
 }
 
 .grvrocks-grid .entry:hover {
@@ -1298,6 +1302,26 @@ p.entry-meta {
 }
 
 
+
+.grvrocks-grid .entry-header {
+	position: absolute;
+	top: 40px;
+	width: 100%;
+}
+
+.grvrocks-grid .entry-header .entry-meta {
+	margin-bottom: 0;
+}
+
+.grvrocks-grid .entry-time::before {
+	display: none;
+}
+
+.grvrocks-grid .entry-meta,
+.grvrocks-grid .entry-meta a {
+	color: #fff;
+	font-size: 18px;
+}
 /* Pagination
 --------------------------------------------- */
 
@@ -1749,6 +1773,24 @@ p.form-submit,
 	.first {
 		clear: both;
 		margin-left: 0;
+	}
+
+	.grvrocks-grid .entry {
+		background-color: rgba(0, 0, 0, 0.5);
+		float: left;
+		margin: 0 4% 4% 0;
+		min-height: 200px;
+		position: relative;
+		text-align: center;
+		width: 48%;
+	}
+
+	.grvrocks-grid .entry:nth-of-type(2n) {
+		margin: 0 0 4% 0;
+	}
+
+	.grvrocks-grid .entry:nth-of-type(2n+1) {
+		margin: 0 4% 4% 0;
 	}
 
 }
