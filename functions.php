@@ -187,7 +187,7 @@ function cegg_set_background_image() {
 add_action( 'genesis_after_header', 'cegg_entry_background' );
 function cegg_entry_background() {
 	$postid = get_the_ID();
-	if ( (is_singular( 'post' ) || ( is_singular( 'page' ) ) && !has_post_format( array('link', 'status', 'quote'), $postid) && has_post_thumbnail($postid) ) ) {
+	if ( (is_singular( 'post' ) || ( is_singular( 'page' ) ) && (!has_post_format( 'quote', $postid ) || !has_post_format( 'link', $postid )) && has_post_thumbnail($postid) ) ) {
 		echo '<div class="entry-background"></div>';
 
 	}
