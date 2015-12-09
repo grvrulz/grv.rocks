@@ -189,8 +189,6 @@ function grvrocks_entry_background() {
 	$postid = get_the_ID();
 	if ( ( is_singular( 'post' ) ||  is_singular( 'page' ) ) && ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
 		echo '<div class="entry-background"></div>';
-		echo $postid;
-		echo get_post_format($postid);
 
 	}
 }
