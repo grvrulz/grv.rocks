@@ -547,6 +547,10 @@ th {
 
 .site-inner {
 	clear: both;
+}
+
+.no-featured-image .site-inner {
+	clear: both;
 	padding-top: 96px;
 }
 
