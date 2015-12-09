@@ -299,6 +299,11 @@ img {
 	height: auto;
 }
 
+img.post-image.entry-image {
+	float: left;
+	margin: 0;
+}
+
 img.round {
     border-radius: 50%;
 }
@@ -1244,6 +1249,7 @@ img.alignright,
 	background-color: rgba(0, 0, 0, 0.5);
 	float: none;
 	margin: 0 4% 4% 0;
+	padding: 0;
 	min-height: 200px;
 	position: relative;
 	text-align: center;
