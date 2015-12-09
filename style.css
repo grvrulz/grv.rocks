@@ -926,6 +926,7 @@ img.alignright,
 	position: fixed;
 	left: 0;
 	width: 100%;
+	z-index: 9999999;
 }
 
 .site-header .wrap {
