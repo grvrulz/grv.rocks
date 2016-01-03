@@ -1180,7 +1180,7 @@ img.alignright,
 
 .entry-background {
 	height: 100vh;
-	display: table;
+
 	width: 100%;
 	z-index: -99 !important;
 }
@@ -1192,6 +1192,7 @@ img.alignright,
 
 .dark-gradient {
 	position: relative;
+	display: table;
 	height: 100%;
 	width: 100%;
 	background: -moz-linear-gradient(top, rgba(0,0,0,.25) 0%, rgba(0,0,0,0.75) 100%);
