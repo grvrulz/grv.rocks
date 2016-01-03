@@ -1179,14 +1179,7 @@ img.alignright,
 
 .entry-background {
 	height: 100vh;
-
 	width: 100%;
-	z-index: -99 !important;
-}
-
-.entry-background .wrap {
-	display: table-cell;
-	vertical-align: middle;
 }
 
 .dark-gradient {
@@ -1201,6 +1194,11 @@ img.alignright,
 	background: -ms-linear-gradient(top, rgba(0,0,0,.25) 0%,rgba(0,0,0,0.75) 100%);
 	background: linear-gradient(to bottom, rgba(0,0,0,.25) 0%,rgba(0,0,0,0.75) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33300000', endColorstr='#80000000',GradientType=0 );
+}
+
+.entry-background .wrapper {
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .single .entry-background * {
@@ -1510,8 +1508,9 @@ p.form-submit,
 	.entry-background {
 		height: 100vh;
 	}
-	.entry-background .wrap {
+	.entry-background .wrapper {
 		max-width: 700px;
+		width: 100%;
 		margin: 0 auto;
 	}
 }
