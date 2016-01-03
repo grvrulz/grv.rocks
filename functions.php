@@ -115,11 +115,6 @@ function sp_post_info_filter($post_info) {
 	return $post_info;
 }
 
-
-//* Reposition the entry meta in the entry header
-remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
-
 //* Add support for post formats
 add_theme_support( 'post-formats', array(
 	'aside',
