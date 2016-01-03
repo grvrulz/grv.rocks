@@ -12,7 +12,7 @@ add_action( 'genesis_after_header', 'grvrocks_entry_background' );
 function grvrocks_entry_background() {
 	if ( ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
 		echo '<div class="entry-background"><div class="dark-gradient"><div class="wrap">';
-		echo genesis_post_meta();
+		echo genesis_do_post_meta();
 		echo genesis_do_post_title();
 		if ( function_exists( 'the_subtitle' ) ) {
 			the_subtitle( '<p class="entry-subtitle">', '</p>' );
