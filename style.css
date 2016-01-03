@@ -937,10 +937,7 @@ img.alignright,
 	left: 0;
 	width: 100%;
 	z-index: 9999;
-}
-
-.site-header .wrap {
-	padding: 20px 0;
+	padding: 20px;
 }
 
 /* Site Title and Description
