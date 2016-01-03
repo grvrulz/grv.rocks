@@ -1180,7 +1180,7 @@ img.alignright,
 
 .entry-background {
 	height: 100vh;
-	display: block;
+	display: table;
 	width: 100%;
 	z-index: -99 !important;
 }
