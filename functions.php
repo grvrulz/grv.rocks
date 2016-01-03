@@ -43,7 +43,6 @@ add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu',
 
 //* Add support for structural wraps
 add_theme_support( 'genesis-structural-wraps', array(
-	'header',
 	'footer'
 ) );
 
@@ -70,7 +69,7 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
 //* Remove comment form allowed tags
 add_filter( 'comment_form_defaults', 'grvrocks_remove_comment_form_allowed_tags' );
 function grvrocks_remove_comment_form_allowed_tags( $defaults ) {
-	
+
 	$defaults['comment_notes_after'] = '';
 	return $defaults;
 
@@ -154,7 +153,7 @@ add_filter('genesis_seo_title', 'wap_site_title' );
 // Add additional custom style to site header
 function wap_site_title( $title ) {
 
-    	// Change $custom_title text as you wish
+		// Change $custom_title text as you wish
 	$custom_title = 'Gaurav <span class="thin">Pareek</span>';
 
 	// Don't change the rest of this on down
