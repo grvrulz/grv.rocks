@@ -668,10 +668,6 @@ th {
 	color: #e5554e;
 }
 
-.single .entry-title a {
-	color: #fafafa;
-}
-
 .widget-title {
 	font-size: 18px;
 	margin-bottom: 20px;
@@ -1204,6 +1200,11 @@ img.alignright,
 	background: linear-gradient(to bottom, rgba(0,0,0,.25) 0%,rgba(0,0,0,0.75) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33300000', endColorstr='#80000000',GradientType=0 );
 }
+
+.single .entry-header * {
+	color: #ffffff;
+}
+
 /* Entries
 --------------------------------------------- */
 
@@ -1509,7 +1510,7 @@ p.form-submit,
 		height: 560px;
 	}
 	.entry-background .wrap {
-		padding: 10% 0 6%;
+		padding: 10% 0;
 	}
 }
 
