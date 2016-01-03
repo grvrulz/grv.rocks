@@ -1511,7 +1511,8 @@ p.form-submit,
 		height: 100vh;
 	}
 	.entry-background .wrap {
-
+		max-width: 700px;
+		margin: 0 auto;
 	}
 }
 

@@ -17,7 +17,7 @@ function grvrocks_entry_background() {
 		if ( function_exists( 'the_subtitle' ) ) {
 			the_subtitle( '<p class="entry-subtitle">', '</p>' );
 		}
-		//echo genesis_do_post_info();
+		echo genesis_do_post_info();
 		echo '</div></div></div>';
 	}
 }
