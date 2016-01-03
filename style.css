@@ -1181,7 +1181,6 @@ img.alignright,
 .entry-background {
 	height: 100%;
 	display: block;
-	height: 360px;
 	width: 100%;
 	z-index: -99 !important;
 }
@@ -1509,7 +1508,7 @@ p.form-submit,
 
 @media only screen and (min-width: 480px) {
 	.entry-background {
-		height: 560px;
+
 	}
 	.entry-background .wrap {
 		padding: 10% 0;
