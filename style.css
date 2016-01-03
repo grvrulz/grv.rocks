@@ -1203,7 +1203,7 @@ img.alignright,
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33300000', endColorstr='#80000000',GradientType=0 );
 }
 
-.single .entry-header * {
+.single .entry-background * {
 	color: #ffffff;
 }
 
