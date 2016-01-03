@@ -1230,7 +1230,7 @@ img.alignright,
 	border: none;
 }
 
-.blog .entry:nth-child(2n) {
+.blog .entry:nth-of-type(2n) {
 	background: #f9f9f9;
 }
 
