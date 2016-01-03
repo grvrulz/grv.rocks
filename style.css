@@ -1180,13 +1180,11 @@ img.alignright,
 .entry-background {
 	height: 100vh;
 	width: 100%;
-	display: table;
-	table-layout: fixed;
+	position: relative;
 }
 
 .dark-gradient {
 	position: relative;
-	display: table;
 	height: 100%;
 	width: 100%;
 	background: -moz-linear-gradient(top, rgba(0,0,0,.25) 0%, rgba(0,0,0,0.75) 100%);
@@ -1199,9 +1197,11 @@ img.alignright,
 }
 
 .entry-background .wrapper {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .single .entry-background * {
@@ -1513,9 +1513,7 @@ p.form-submit,
 		height: 100vh;
 	}
 	.entry-background .inner-wrapper {
-		max-width: 700px;
-		width: 100%;
-		margin: 0 auto;
+
 	}
 }
 
