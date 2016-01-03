@@ -937,6 +937,8 @@ img.alignright,
 	left: 0;
 	width: 100%;
 	z-index: 9999;
+}
+.site-header .wrap {
 	padding: 20px;
 }
 
@@ -1560,7 +1562,7 @@ p.form-submit,
 	}
 
 	.site-header {
-		padding: 20px;
+		padding: 0;
 	}
 
 	.title-area {

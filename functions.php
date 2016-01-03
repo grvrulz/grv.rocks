@@ -43,7 +43,8 @@ add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu',
 
 //* Add support for structural wraps
 add_theme_support( 'genesis-structural-wraps', array(
-	'footer'
+	'header',
+	'footer',
 ) );
 
 //* Remove the sidebars
