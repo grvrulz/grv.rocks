@@ -928,9 +928,6 @@ img.alignright,
 	background-color: rgba(32, 32, 32, 0.76);
 	box-shadow: 0 1px 4px 1px rgba(32, 32, 32, 0.6);
 	text-align: center;
-	position: fixed;
-	left: 0;
-	width: 100%;
 	z-index: 9999;
 }
 .site-header .wrap {
@@ -1581,6 +1578,9 @@ p.form-submit,
 
 	.site-header {
 		padding: 0;
+		position: fixed;
+		left: 0;
+		width: 100%;
 	}
 
 	.title-area {
