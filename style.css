@@ -1196,12 +1196,14 @@ img.alignright,
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33300000', endColorstr='#80000000',GradientType=0 );
 }
 
-.entry-background .wrapper {
+.entry-background .wrap {
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+	margin: 0 auto;
+	width: 100%;
 }
 
 .single .entry-background * {
@@ -1520,10 +1522,6 @@ p.form-submit,
 @media only screen and (min-width: 800px) {
 
 	.entry-background .wrap {
-
-	}
-
-	.entry-background .inner-wrapper {
 		max-width: 700px;
 		width: 700px;
 		margin: 0 auto;
