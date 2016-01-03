@@ -1179,13 +1179,14 @@ img.alignright,
 ---------------------------------------------------------- */
 
 .entry-background {
+	height: 360px;
 	display: block;
 	width: 100%;
 	z-index: -99 !important;
 }
 
 .entry-background .wrap {
-	padding: 200px;
+	padding: 7% 0 4%;
 }
 
 .dark-gradient {
@@ -1507,10 +1508,10 @@ p.form-submit,
 
 @media only screen and (min-width: 480px) {
 	.entry-background {
-
+		height: 560px;
 	}
 	.entry-background .wrap {
-		padding: 200px 0;
+		padding: 10% 0 7%;
 	}
 }
 

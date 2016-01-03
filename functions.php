@@ -21,9 +21,9 @@ function grvrocks_scripts_styles() {
 		wp_enqueue_script( 'grvrocks-backstretch-set', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch-set.js' , array( 'jquery', 'grvrocks-backstretch' ), '1.0.0', true );
 	}
 
-	if ( is_singular( array( 'post', 'page' ) ) ) {
-		wp_enqueue_script( 'grvrocks-singular', get_bloginfo( 'stylesheet_directory' ) . '/js/singular-script.js', array( 'jquery' ), '1.0.0', true );
-	}
+//	if ( is_singular( array( 'post', 'page' ) ) ) {
+//		wp_enqueue_script( 'grvrocks-singular', get_bloginfo( 'stylesheet_directory' ) . '/js/singular-script.js', array( 'jquery' ), '1.0.0', true );
+//	}
 }
 
 //* Add HTML5 markup structure
