@@ -18,8 +18,9 @@ function grvrocks_entry_background() {
 			the_subtitle( '<p class="entry-subtitle">', '</p>' );
 		}
 		echo genesis_post_info();
-		echo '</div></div></div>';
+		echo '</div></div>';
 		echo '<div class="dark-gradient"></div>';
+		echo '</div>';
 	}
 }
 
