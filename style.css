@@ -1225,6 +1225,15 @@ img.alignright,
 	margin-bottom: 30px;
 }
 
+.blog .entry {
+	padding: 40px 0;
+	border: none;
+}
+
+.blog .entry:nth-child(2n) {
+	background: #f9f9f9;
+}
+
 .entry-header,
 .entry-content,
 .entry-footer,

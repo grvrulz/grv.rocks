@@ -115,6 +115,13 @@ function sp_post_info_filter($post_info) {
 	return $post_info;
 }
 
+//* Customize the entry meta in the entry footer (requires HTML5 theme support)
+add_filter( 'genesis_post_meta', 'sp_post_meta_filter' );
+function sp_post_meta_filter($post_meta) {
+	$post_meta = '[post_categories BEFORE=""] [post_tags]';
+	return $post_meta;
+}
+
 //* Add support for post formats
 add_theme_support( 'post-formats', array(
 	'aside',
