@@ -939,7 +939,7 @@ img.alignright,
 	z-index: 9999;
 }
 .site-header .wrap {
-	padding: 20px;
+	padding: 0px;
 }
 
 /* Site Title and Description
@@ -1016,7 +1016,7 @@ img.alignright,
 .genesis-nav-menu a {
 	color: #333;
 	display: block;
-	padding: 16px 14px;
+	padding: 20px 14px;
 }
 
 .genesis-nav-menu a:hover,
@@ -1179,7 +1179,7 @@ img.alignright,
 ---------------------------------------------------------- */
 
 .entry-background {
-	height: 360px;
+	height: 100vh;
 	display: block;
 	width: 100%;
 	z-index: -99 !important;
@@ -1508,7 +1508,7 @@ p.form-submit,
 
 @media only screen and (min-width: 480px) {
 	.entry-background {
-		height: 560px;
+		height: 100vh;
 	}
 	.entry-background .wrap {
 		padding: 10% 0 7%;
