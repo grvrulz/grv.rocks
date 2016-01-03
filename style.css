@@ -1511,7 +1511,7 @@ p.form-submit,
 		height: 100vh;
 	}
 	.entry-background .wrap {
-		padding: 10% 0 7%;
+		padding: 200px 0;
 	}
 }
 
@@ -1591,8 +1591,8 @@ p.form-submit,
 	}
 
 	.site-header .genesis-nav-menu a {
-		padding-bottom: 20px;
-		padding-top: 20px;
+		padding-bottom: 24px;
+		padding-top: 24px;
 	}
 
 	.genesis-nav-menu .menu-item {
