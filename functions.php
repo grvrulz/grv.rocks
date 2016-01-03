@@ -3,8 +3,8 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Mobile First Theme' );
-define( 'CHILD_THEME_URL', 'http://briangardner.com/themes/grvrocks/' );
+define( 'CHILD_THEME_NAME', 'GrvRocks theme' );
+define( 'CHILD_THEME_URL', 'https://grv.rocks/' );
 define( 'CHILD_THEME_VERSION', '1.0.4' );
 
 //* Enqueue scripts and styles
@@ -138,8 +138,8 @@ remove_action( 'genesis_footer', 'genesis_do_footer' );
 
 
 // do NOT include the opening line! Just add what's below to the end of your functions.php file
-add_action( 'edit_form_after_title', 'rgc_posts_page_edit_form' );
-function rgc_posts_page_edit_form() {
+add_action( 'edit_form_after_title', 'grvrocks_posts_page_edit_form' );
+function grvrocks_posts_page_edit_form() {
 	global $post, $post_type, $post_ID;
 	if ( $post_ID == get_option( 'page_for_posts' ) && empty( $post->post_content ) ) {
 		add_post_type_support( $post_type, 'editor' );
@@ -148,10 +148,10 @@ function rgc_posts_page_edit_form() {
 
 
 // Filter the title with a custom function
-add_filter('genesis_seo_title', 'wap_site_title' );
+add_filter('genesis_seo_title', 'grvrocks_site_title' );
 
 // Add additional custom style to site header
-function wap_site_title( $title ) {
+function grvrocks_site_title( $title ) {
 
 		// Change $custom_title text as you wish
 	$custom_title = 'Gaurav <span class="thin">Pareek</span>';
@@ -173,37 +173,6 @@ function wap_site_title( $title ) {
 //* Add editor styles
 add_editor_style( 'editor-style.css' );
 
-
-//* Backstretch
-
-//* Localize backstretch script
-add_action( 'genesis_after_entry', 'grvrocks_set_background_image' );
-function grvrocks_set_background_image() {
-	$image = array( 'src' => has_post_thumbnail() ? genesis_get_image( array( 'format' => 'url' ) ) : '' );
-	wp_localize_script( 'grvrocks-backstretch-set', 'BackStretchImg', $image );
-}
-//* Hook entry background area
-add_action( 'genesis_after_header', 'grvrocks_entry_background' );
-function grvrocks_entry_background() {
-	$postid = get_the_ID();
-	if ( ( is_singular( 'post' ) ||  is_singular( 'page' ) ) && ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
-		echo '<div class="entry-background"></div>';
-
-	}
-}
-
-
-
-//* Add body class if no featured image
-add_filter( 'body_class', 'grvrocks_featured_img_body_class' );
-function grvrocks_featured_img_body_class( $classes ) {
-
-	if ( is_singular( array( 'post', 'page' ) ) && ! has_post_thumbnail() ) {
-		$classes[] = 'no-featured-image';
-	}
-	return $classes;
-
-}
 
 //* Remove Content and Excerpt options from content archive metabox
 add_filter( 'genesis_archive_display_options', 'grvrocks_add_content_archive_display_option' );
