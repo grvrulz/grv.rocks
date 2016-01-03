@@ -1228,6 +1228,7 @@ img.alignright,
 .blog .entry {
 	padding: 40px 0;
 	border: none;
+	background: #ffffff;
 }
 
 .blog .entry:nth-of-type(2n) {
