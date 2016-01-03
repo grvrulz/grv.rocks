@@ -1180,6 +1180,7 @@ img.alignright,
 .entry-background {
 	height: 100vh;
 	width: 100%;
+	display: table;
 }
 
 .dark-gradient {
