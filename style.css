@@ -654,10 +654,6 @@ th {
 
 }
 
-.entry-title {
-	font-size: 52px;
-}
-
 .entry-title a,
 .sidebar .widget-title a {
 	color: #333;
@@ -1204,6 +1200,7 @@ img.alignright,
 	transform: translateY(-50%);
 	margin: 0 auto;
 	width: 100%;
+	padding: 0 2%;
 }
 
 .single .entry-background * {
@@ -1682,6 +1679,10 @@ p.form-submit,
 		max-width: 700px;
 		margin: 0 auto;
 		padding: 0;
+	}
+
+	.entry-title {
+		font-size: 52px;
 	}
 
 	.comment-list ul.children {
