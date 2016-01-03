@@ -1225,14 +1225,14 @@ img.alignright,
 	margin-bottom: 30px;
 }
 
-.blog .entry {
+.blog .entry:nth-of-type(2n-1) {
 	padding: 40px 0;
 	border: none;
-	background: #ffffff;
+	background-color: #ffffff;
 }
 
 .blog .entry:nth-of-type(2n) {
-	background: #f9f9f9;
+	background-color: #f9f9f9;
 }
 
 .entry-header,
