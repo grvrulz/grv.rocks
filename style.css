@@ -1181,6 +1181,7 @@ img.alignright,
 	height: 100vh;
 	width: 100%;
 	display: table;
+	table-layout: fixed;
 }
 
 .dark-gradient {
@@ -1517,6 +1518,12 @@ p.form-submit,
 }
 
 @media only screen and (min-width: 800px) {
+
+	.entry-background .wrapper {
+		max-width: 700px;
+		width: 700px;
+		margin: 0 auto;
+	}
 
 	.site-container {
 		width: 100%;
