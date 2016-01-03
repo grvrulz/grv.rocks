@@ -1177,7 +1177,7 @@ img.alignright,
 ---------------------------------------------------------- */
 
 .entry-background {
-	height: 350px;
+	height: 100%;
 	display: block;
 	height: 560px;
 	width: 100%;
@@ -1190,7 +1190,7 @@ img.alignright,
 .page.page-template-page_blog-php .entry {
 	margin-bottom: 0;
 	background: transparent;
-	padding: 40px 6% 30px;
+	padding: 0;
 	width: 100%;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
@@ -1205,8 +1205,13 @@ img.alignright,
 .entry-content,
 .entry-footer,
 .entry-comments,
-.comment-respond {
+.comment-respond,
+.entry .wrap{
 	width: 100%;
+}
+
+.entry-content {
+	padding-top: 48px;
 }
 
 .entry-content ol,
@@ -1480,7 +1485,8 @@ p.form-submit,
 
 @media only screen and (min-width: 480px) {
 	.entry-background {
-		height: 560px;
+		height: 100%;
+		padding-top: 20%;
 	}
 }
 
@@ -1636,7 +1642,8 @@ p.form-submit,
 	.entry-content,
 	.entry-footer,
 	.entry-comments,
-	.comment-respond {
+	.comment-respond,
+	.entry .wrap{
 		max-width: 700px;
 		margin: 0 auto;
 	}
