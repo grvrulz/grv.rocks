@@ -11,14 +11,14 @@ function grvrocks_set_background_image() {
 add_action( 'genesis_entry_header', 'grvrocks_entry_background_start', 4 );
 function grvrocks_entry_background_start() {
 	if ( ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
-		echo '<div class="entry-background"><div class="wrap">';
+		echo '<div class="entry-background"><div class-"dark-gradient"><div class="wrap">';
 	}
 }
 
 add_action( 'genesis_entry_header', 'grvrocks_entry_background_end', 16 );
 function grvrocks_entry_background_end() {
 	if ( ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
-		echo '</div></div>';
+		echo '</div></div></div>';
 	}
 }
 

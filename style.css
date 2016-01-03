@@ -668,6 +668,10 @@ th {
 	color: #e5554e;
 }
 
+.single .entry-title a {
+	color: #fafafa;
+}
+
 .widget-title {
 	font-size: 18px;
 	margin-bottom: 20px;
@@ -1183,6 +1187,22 @@ img.alignright,
 	width: 100%;
 	z-index: -99 !important;
 }
+
+.entry-background .wrap {
+	padding: 6% 0 6%;
+}
+
+dark-gradient {
+	height: 100%;
+	width: 100%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,.25) 0%, rgba(0,0,0,0.75) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.75)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,.25) 0%,rgba(0,0,0,0.75) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,.25) 0%,rgba(0,0,0,0.75) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,.25) 0%,rgba(0,0,0,0.75) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,.25) 0%,rgba(0,0,0,0.75) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33300000', endColorstr='#80000000',GradientType=0 );
+}
 /* Entries
 --------------------------------------------- */
 
@@ -1485,8 +1505,11 @@ p.form-submit,
 
 @media only screen and (min-width: 480px) {
 	.entry-background {
-		height: 100%;
+		height: 360px;
 		padding-top: 20%;
+	}
+	.entry-background .wrap {
+		padding: 10% 0 6%;
 	}
 }
 
