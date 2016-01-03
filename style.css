@@ -1183,7 +1183,7 @@ img.alignright,
 .entry-background {
 	height: 100%;
 	display: block;
-	height: 560px;
+	height: 360px;
 	width: 100%;
 	z-index: -99 !important;
 }
@@ -1192,7 +1192,7 @@ img.alignright,
 	padding: 6% 0 6%;
 }
 
-dark-gradient {
+.dark-gradient {
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -1506,7 +1506,7 @@ p.form-submit,
 
 @media only screen and (min-width: 480px) {
 	.entry-background {
-		height: 360px;
+		height: 560px;
 	}
 	.entry-background .wrap {
 		padding: 10% 0 6%;
