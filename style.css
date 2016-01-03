@@ -1186,7 +1186,8 @@ img.alignright,
 }
 
 .entry-background .wrap {
-	padding: 7% 0 4%;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .dark-gradient {
@@ -1511,7 +1512,7 @@ p.form-submit,
 		height: 100vh;
 	}
 	.entry-background .wrap {
-		padding: 200px 0;
+
 	}
 }
 

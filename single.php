@@ -8,21 +8,28 @@ function grvrocks_set_background_image() {
 	wp_localize_script( 'grvrocks-backstretch-set', 'BackStretchImg', $image );
 }
 //* Hook entry background area
-add_action( 'genesis_entry_header', 'grvrocks_entry_background_start', 4 );
-function grvrocks_entry_background_start() {
+add_action( 'genesis_after_header', 'grvrocks_entry_background' );
+function grvrocks_entry_background() {
 	if ( ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
 		echo '<div class="entry-background"><div class="dark-gradient"><div class="wrap">';
-	}
-}
-
-add_action( 'genesis_entry_header', 'grvrocks_entry_background_end', 16 );
-function grvrocks_entry_background_end() {
-	if ( ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
+		echo genesis_post_info();
+		echo genesis_do_post_title();
+		if ( function_exists( 'the_subtitle' ) ) {
+			the_subtitle( '<p class="entry-subtitle">', '</p>' );
+		}
 		echo '</div></div></div>';
 	}
 }
 
+//* Remove the entry header markup (requires HTML5 theme support)
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
 
+//* Remove the entry meta in the entry header (requires HTML5 theme support)
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+
+//* Remove the entry title (requires HTML5 theme support)
+remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
 //* Add body class if no featured image
 add_filter( 'body_class', 'grvrocks_featured_img_body_class' );
