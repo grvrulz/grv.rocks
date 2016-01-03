@@ -8,14 +8,17 @@ function grvrocks_set_background_image() {
 	wp_localize_script( 'grvrocks-backstretch-set', 'BackStretchImg', $image );
 }
 //* Hook entry background area
-add_action( 'genesis_after_header', 'grvrocks_entry_background' );
-function grvrocks_entry_background() {
+add_action( 'genesis_entry_header', 'grvrocks_entry_background_start', 4 );
+function grvrocks_entry_background_start() {
 	if ( ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
 		echo '<div class="entry-background"><div class="wrap">';
-		echo genesis_do_post_title();
+	}
+}
 
+add_action( 'genesis_entry_header', 'grvrocks_entry_background_end', 16 );
+function grvrocks_entry_background_end() {
+	if ( ( false == get_post_format($postid) || 'aside' == get_post_format($postid) ) && has_post_thumbnail($postid) ) {
 		echo '</div></div>';
-
 	}
 }
 
