@@ -548,6 +548,7 @@ th {
 	clear: both;
 }
 
+.blog .site-inner,
 .no-featured-image .site-inner {
 	clear: both;
 	padding-top: 96px;
