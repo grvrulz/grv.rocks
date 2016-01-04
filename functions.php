@@ -210,3 +210,6 @@ function grvrocks_body_classes( $classes ) {
 	return $classes;
 
 }
+
+
+add_theme_support("aesop-component-styles", array("parallax", "image", "quote", "gallery", "content", "video", "audio", "collection", "chapter", "document", "character", "map", "timeline" ) );
