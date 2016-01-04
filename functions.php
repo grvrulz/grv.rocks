@@ -192,7 +192,7 @@ function grvrocks_add_content_archive_display_option( $options ) {
 
 //* Add body class if no featured image
 add_filter( 'body_class', 'grvrocks_body_classes' );
-function grvrocks_classes( $classes ) {
+function grvrocks_body_classes( $classes ) {
 
 	if ( is_singular() ) {
 		$classes[] = 'singular';
