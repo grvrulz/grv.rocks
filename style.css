@@ -946,8 +946,8 @@ img.alignright,
 }
 
 .single.has-post-thumbnail .site-header {
-	background: transparent;
-	border-bottom: 1px solid rgba(250,250,250,0.2);
+	background-color: rgba(32, 32, 32, 0.76);
+	box-shadow: 0 1px 4px 1px rgba(32, 32, 32, 0.6);
 }
 
 .site-header .wrap {
