@@ -1082,8 +1082,16 @@ img.alignright,
 	color: #333;
 }
 
+.site-header .genesis-nav-menu a:hover {
+	color: #212121;
+}
+
 .single.has-post-thumbnail .site-header .genesis-nav-menu a {
-	color: #333;
+	color: #eee;
+}
+
+.single.has-post-thumbnail .site-header .genesis-nav-menu a:hover {
+	color: #fff;
 }
 
 .site-header .sub-menu {
