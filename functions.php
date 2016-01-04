@@ -46,7 +46,6 @@ add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu',
 
 //* Add support for structural wraps
 add_theme_support( 'genesis-structural-wraps', array(
-	'header',
 	'footer',
 ) );
 
@@ -188,4 +187,26 @@ function grvrocks_add_content_archive_display_option( $options ) {
 	$options['nocontent'] = __( 'No Content', 'grvrocks' );
 
 	return $options;
+}
+
+
+//* Add body class if no featured image
+add_filter( 'body_class', 'grvrocks_body_classes' );
+function grvrocks_classes( $classes ) {
+
+	if ( is_singular() ) {
+		$classes[] = 'singular';
+	}
+
+	if ( has_post_thumbnail() ) {
+		$classes[] = 'has-post-thumbnail';
+	}
+
+	if ( is_singular( array( 'post', 'page' ) ) && ! has_post_thumbnail() ) {
+		$classes[] = 'no-featured-image';
+	}
+
+
+	return $classes;
+
 }

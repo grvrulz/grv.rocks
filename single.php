@@ -33,17 +33,4 @@ remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 //* Remove the entry title (requires HTML5 theme support)
 remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
-//* Add body class if no featured image
-add_filter( 'body_class', 'grvrocks_featured_img_body_class' );
-function grvrocks_featured_img_body_class( $classes ) {
-
-	if ( is_singular( array( 'post', 'page' ) ) && ! has_post_thumbnail() ) {
-		$classes[] = 'no-featured-image';
-	}
-	return $classes;
-
-}
-
-
-
 genesis();
